@@ -1,0 +1,8 @@
+.container{
+    border-width: 1px;
+    border-color: gray;
+}
+
+.logo-small {
+    width: 100px;
+}
