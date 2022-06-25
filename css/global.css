@@ -4,7 +4,7 @@ body {
 
 .container {
   border-width: 1px;
-  border-color: gray;
+  background-color: rgb(240, 240, 240);
 }
 
 .logo-small {
