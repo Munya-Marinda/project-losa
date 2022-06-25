@@ -1,8 +1,12 @@
-.container{
-    border-width: 1px;
-    border-color: gray;
+body {
+  background-color: aqua;
+}
+
+.container {
+  border-width: 1px;
+  border-color: gray;
 }
 
 .logo-small {
-    width: 100px;
+  width: 100px;
 }
