@@ -5,46 +5,300 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./css/global.css" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
     />
   </head>
 
   <body>
-    <div class="container-sm">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <img
-              class="logo-small"
-              src="./images/svg-files/logo_LOSA.svg"
-              alt="Project LOSA logo"
-            />
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown"
-                >MENU <span class="caret"></span
-              ></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
-                <li><a href="#">Bootstrap</a></li>
+    <!-- This is the Navbar on top of the page -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div
+        class="container-fluid"
+        style="
+          background-color: rgb(236, 236, 236);
+          padding-bottom: 10px;
+          padding-top: 10px;
+        "
+      >
+        <img
+          class="logo-small"
+          src="./images/svg-files/logo_LOSA.svg"
+          alt="Project LOSA logo"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">JavaScript</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">About</a></li>
+                <li><a class="dropdown-item" href="#">Github</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Join Community</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Report Error</a>
+                </li>
               </ul>
             </li>
           </ul>
         </div>
-      </nav>
-      <div class="container">
-        <h2 style="font-weight: bold">{Lesson Header}</h2>
+      </div>
+    </nav>
+
+    <!-- This is where the main part of the page starts -->
+    <div class="container-sm" style="border: 1px solid gray">
+      <!-- Lesson Header -->
+      <h2 style="font-weight: bold; padding-top: 15px">{Lesson Header}</h2>
+
+      <!-- Lesson Navigation (next or prev lesson) -->
+      <div
+        class="row align-items-start"
+        style="padding-top: 25px; padding-bottom: 25px"
+      >
+        <div class="col" style="display: flex; justify-content: center">
+          <img
+            style="width: 35px"
+            src="./images/svg-files/icons/arrow-left-square-fill.svg"
+          />
+        </div>
+        <div class="col" style="display: flex; justify-content: center">
+          <button
+            style="
+              text-align: center;
+              color: white;
+              background: maroon;
+              border: 0px;
+              border-radius: 10px;
+              padding: 7px;
+            "
+          >
+            REFENCE
+          </button>
+        </div>
+        <div class="col" style="display: flex; justify-content: center">
+          <img
+            style="width: 35px"
+            src="./images/svg-files/icons/arrow-right-square-fill.svg"
+          />
+        </div>
+      </div>
+
+      <!-- Lesson Description -->
+      <p>{Lesson Description}</p>
+
+      <!-- Content Container -->
+      <div class="container" style="border: 1px solid gray">
+        <!-- Lesson Examples -->
+        <h3 style="font-weight: bold; padding-top: 15px; padding-bottom: 10px">
+          Example
+        </h3>
+        <div style="border: 1px dashed red; padding: 10px">
+          {descr, code}, <br />
+          {descr, code},<br />... {descr, code}
+        </div>
+
+        <!-- Lesson Challenges -->
+        <h4 style="font-weight: bold; padding-top: 25px; padding-bottom: 10px">
+          Challenge!
+        </h4>
+        <div style="border: 1px dashed red; padding: 10px">
+          {name, descr, hint,}
+        </div>
+
+        <!-- Lesson Advanced Information -->
+        <h4 style="font-weight: bold; padding-top: 35px; padding-bottom: 10px">
+          Advanced Information
+        </h4>
+        <div style="border: 1px dashed red; padding: 10px">[data]</div>
+
+        <!-- Lesson Tags -->
+        <h6 style="font-weight: bold; padding-top: 35px; padding-bottom: 10px">
+          Related Tags
+        </h6>
+        <div style="border: 1px dashed red; padding: 10px">
+          tag <br />tag <br />tag <br />tag <br />tag <br />tag
+        </div>
+
+        <!-- Lesson Navigation (next or prev lesson) -->
+        <div
+          class="row align-items-start"
+          style="padding-top: 35px; padding-bottom: 35px"
+        >
+          <div class="col" style="display: flex; justify-content: center">
+            <img
+              style="width: 35px"
+              src="./images/svg-files/icons/arrow-left-square-fill.svg"
+            />
+          </div>
+          <div class="col" style="display: flex; justify-content: center">
+            <button
+              style="
+                text-align: center;
+                color: white;
+                background: maroon;
+                border: 0px;
+                border-radius: 10px;
+                padding: 7px;
+              "
+            >
+              REFENCE
+            </button>
+          </div>
+          <div class="col" style="display: flex; justify-content: center">
+            <img
+              style="width: 35px"
+              src="./images/svg-files/icons/arrow-right-square-fill.svg"
+            />
+          </div>
+        </div>
+
+        <!-- More Options -->
+        <div style="margin-bottom: 35px">
+          <div style="display: flex; justify-content: center">
+            <button
+              role="button"
+              class="btn btn-primary"
+              style="
+                background-color: maroon;
+                border: 0px;
+                width: 50vw;
+                margin-bottom: 10px;
+              "
+            >
+              About
+            </button>
+          </div>
+          <div style="display: flex; justify-content: center">
+            <button
+              role="button"
+              class="btn btn-primary"
+              style="
+                background-color: maroon;
+                border: 0px;
+                width: 50vw;
+                margin-bottom: 10px;
+              "
+            >
+              Github
+            </button>
+          </div>
+          <div style="display: flex; justify-content: center">
+            <button
+              role="button"
+              class="btn btn-primary"
+              style="
+                background-color: maroon;
+                border: 0px;
+                width: 50vw;
+                margin-bottom: 10px;
+              "
+            >
+              Join Community!
+            </button>
+          </div>
+          <div style="display: flex; justify-content: center">
+            <button
+              role="button"
+              class="btn btn-primary"
+              style="background-color: maroon; border: 0px; width: 50vw"
+            >
+              Report Error
+            </button>
+          </div>
+        </div>
+
+        <!-- Top Lessons -->
+        <div
+          style="display: flex; justify-content: center; margin-bottom: 25px"
+        >
+          <div>
+            <h4 style="font-weight: bold">Top Topics</h4>
+            <ul>
+              <li>{Topic1}</li>
+              <li>{Topic2}</li>
+              <li>{Topic3}</li>
+              <li>{Topic4}</li>
+              <li>{Topic5}</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div
+          style="text-align: center; padding-left: 20px; padding-right: 20px"
+        >
+          <p>
+            <b>
+              Project LOSA is licensed under the GNU General Public License
+              v2.0</b
+            >
+            <br />
+            The GNU GPL is the most widely used free software license and has a
+            strong copyleft requirement. When distributing derived works, the
+            source code of the work must be made available under the same
+            license. There are multiple variants of the GNU GPL, each with
+            different requirements.
+          </p>
+        </div>
+
+        <!-- Logo -->
+        <div style="display: flex; justify-content: center; padding: 50px">
+          <img
+            class="logo-small"
+            src="./images/svg-files/logo_LOSA.svg"
+            alt="Project LOSA logo"
+            style="width: 250px"
+          />
+        </div>
       </div>
     </div>
+
+    <!-- Below is the link that connects to the file "/javascript/script" -->
+    <script src="./javascript/script.js"></script>
 
     <!-- Below are the links to connect to Bootstrap (JQuery and JavaScript) -->
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

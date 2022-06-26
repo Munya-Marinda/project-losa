@@ -2,7 +2,7 @@ body {
   background-color: aqua;
 }
 
-.container {
+.mycontainer {
   border-width: 1px;
   background-color: rgb(240, 240, 240);
 }
