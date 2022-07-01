@@ -83,19 +83,27 @@
     <!-- This is where the main part of the page starts -->
     <div class="container-sm" style="border: 1px solid gray">
       <!-- Lesson Header -->
-      <h2 style="font-weight: bold; padding-top: 15px">{Lesson Header}</h2>
+      <h2 id="lessonHeader" style="font-weight: bold; padding-top: 15px">
+        {no header ...check the script}
+      </h2>
 
       <!-- Lesson Navigation (next or prev lesson) -->
       <div
         class="row align-items-start"
         style="padding-top: 25px; padding-bottom: 25px"
       >
-        <div class="col" style="display: flex; justify-content: center">
+        <!-- Prev button -->
+        <div
+          class="col"
+          style="display: flex; justify-content: center"
+          onclick="goToPrevLesson()"
+        >
           <img
             style="width: 35px"
             src="./images/svg-files/icons/arrow-left-square-fill.svg"
           />
         </div>
+        <!-- The reference button -->
         <div class="col" style="display: flex; justify-content: center">
           <button
             style="
@@ -110,7 +118,12 @@
             REFENCE
           </button>
         </div>
-        <div class="col" style="display: flex; justify-content: center">
+        <!-- Next button -->
+        <div
+          class="col"
+          style="display: flex; justify-content: center"
+          onclick="goToNextLesson()"
+        >
           <img
             style="width: 35px"
             src="./images/svg-files/icons/arrow-right-square-fill.svg"
@@ -119,7 +132,7 @@
       </div>
 
       <!-- Lesson Description -->
-      <p>{Lesson Description}</p>
+      <p id="lessonDescr">{Lesson Description}</p>
 
       <!-- Content Container -->
       <div class="container" style="border: 1px solid gray">
@@ -127,7 +140,7 @@
         <h3 style="font-weight: bold; padding-top: 15px; padding-bottom: 10px">
           Example
         </h3>
-        <div style="border: 1px dashed red; padding: 10px">
+        <div id="lessonExamples" style="border: 1px dashed red; padding: 10px">
           {descr, code}, <br />
           {descr, code},<br />... {descr, code}
         </div>
@@ -136,7 +149,10 @@
         <h4 style="font-weight: bold; padding-top: 25px; padding-bottom: 10px">
           Challenge!
         </h4>
-        <div style="border: 1px dashed red; padding: 10px">
+        <div
+          id="lessonChallenges"
+          style="border: 1px dashed red; padding: 10px"
+        >
           {name, descr, hint,}
         </div>
 
@@ -144,27 +160,38 @@
         <h4 style="font-weight: bold; padding-top: 35px; padding-bottom: 10px">
           Advanced Information
         </h4>
-        <div style="border: 1px dashed red; padding: 10px">[data]</div>
+        <div
+          id="advanceInformation"
+          style="border: 1px dashed red; padding: 10px"
+        >
+          [data]
+        </div>
 
         <!-- Lesson Tags -->
         <h6 style="font-weight: bold; padding-top: 35px; padding-bottom: 10px">
           Related Tags
         </h6>
-        <div style="border: 1px dashed red; padding: 10px">
+        <div id="lessonTagList" style="border: 1px dashed red; padding: 10px">
           tag <br />tag <br />tag <br />tag <br />tag <br />tag
         </div>
 
         <!-- Lesson Navigation (next or prev lesson) -->
         <div
           class="row align-items-start"
-          style="padding-top: 35px; padding-bottom: 35px"
+          style="padding-top: 25px; padding-bottom: 25px"
         >
-          <div class="col" style="display: flex; justify-content: center">
+          <!-- Prev button -->
+          <div
+            class="col"
+            style="display: flex; justify-content: center"
+            onclick="goToPrevLesson()"
+          >
             <img
               style="width: 35px"
               src="./images/svg-files/icons/arrow-left-square-fill.svg"
             />
           </div>
+          <!-- The reference button -->
           <div class="col" style="display: flex; justify-content: center">
             <button
               style="
@@ -179,7 +206,12 @@
               REFENCE
             </button>
           </div>
-          <div class="col" style="display: flex; justify-content: center">
+          <!-- Next button -->
+          <div
+            class="col"
+            style="display: flex; justify-content: center"
+            onclick="goToNextLesson()"
+          >
             <img
               style="width: 35px"
               src="./images/svg-files/icons/arrow-right-square-fill.svg"
