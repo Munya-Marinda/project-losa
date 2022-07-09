@@ -81,31 +81,33 @@
     </nav>
 
     <!-- This is where the main part of the page starts -->
-    <div class="container-sm" style="border: 1px solid gray;">
-      <!-- Lesson Header -->
+    <div
+      id="MAIN_container"
+      class="container-sm"
+      style="border: 1px solid gray"
+    >
+      <!-- Lesson Image Banner  -->
+      <div id="lessonBannerImage"></div>
       <code id="lessonID"></code>
-      <h2 id="lessonHeader" style="font-weight: bold; padding-top: 15px;">
-        {no header ...check the script}
-      </h2>
 
       <!-- Lesson Navigation (next or prev lesson) -->
       <div
         class="row align-items-start"
-        style="padding-top: 25px; padding-bottom: 25px;"
+        style="padding-top: 25px; padding-bottom: 25px"
       >
         <!-- Prev button -->
         <div
           class="col"
-          style="display: flex; justify-content: center;"
+          style="display: flex; justify-content: center"
           onclick="goToPrevLesson()"
         >
           <img
-            style="width: 35px;"
+            style="width: 35px"
             src="./images/svg-files/icons/arrow-left-square-fill.svg"
           />
         </div>
         <!-- The reference button -->
-        <div class="col" style="display: flex; justify-content: center;">
+        <div class="col" style="display: flex; justify-content: center">
           <button
             style="
               text-align: center;
@@ -122,85 +124,73 @@
         <!-- Next button -->
         <div
           class="col"
-          style="display: flex; justify-content: center;"
+          style="display: flex; justify-content: center"
           onclick="goToNextLesson()"
         >
           <img
-            style="width: 35px;"
+            style="width: 35px"
             src="./images/svg-files/icons/arrow-right-square-fill.svg"
           />
         </div>
       </div>
 
+      <!-- Lesson Header -->
+      <h1
+        id="lessonHeader"
+        style="
+          font-weight: bold;
+          padding-top: 15px;
+          text-align: center;
+          display: none;
+        "
+      ></h1>
+
       <!-- Lesson Description -->
-      <p id="lessonDescr">{Lesson Description}</p>
+      <p id="lessonDescr" style="display: none"></p>
 
       <!-- Lesson Header -->
-      <div id="lessonSubHeaders">
-        {no sub-headers ...check the script}
-      </div>
+      <div id="lessonSubHeaders" style="display: none"></div>
 
       <br />
 
       <!-- Content Container -->
-      <div class="container" style="border: 1px solid gray;">
+      <div class="container" style="border: 1px solid gray">
         <!-- Lesson Examples -->
-        <h3 style="font-weight: bold; padding-top: 15px; padding-bottom: 10px;">
-          Example
-        </h3>
-        <div id="lessonExamples" style="border: 1px dashed red; padding: 10px;">
-          {descr, code}, <br />
-          {descr, code},<br />... {descr, code}
-        </div>
+
+        <div id="lessonExamples" style="display: none"></div>
 
         <!-- Lesson Challenges -->
-        <h4 style="font-weight: bold; padding-top: 25px; padding-bottom: 10px;">
-          Challenge!
-        </h4>
-        <div
-          id="lessonChallenges"
-          style="border: 1px dashed red; padding: 10px;"
-        >
-          {name, descr, hint,}
-        </div>
+
+        <div id="lessonChallenges" style="display: none"></div>
 
         <!-- Lesson Advanced Information -->
-        <h4 style="font-weight: bold; padding-top: 35px; padding-bottom: 10px;">
-          Advanced Information
-        </h4>
-        <div
-          id="advanceInformation"
-          style="border: 1px dashed red; padding: 10px;"
-        >
-          [data]
-        </div>
+
+        <div id="advanceInformation" style="display: none"></div>
 
         <!-- Lesson Tags -->
-        <h6 style="font-weight: bold; padding-top: 35px; padding-bottom: 10px;">
-          Related Tags
-        </h6>
-        <div id="lessonTagList" style="border: 1px dashed red; padding: 10px;">
+
+        <div id="lessonTagList" style="display: none">
           tag <br />tag <br />tag <br />tag <br />tag <br />tag
         </div>
 
         <!-- Lesson Navigation (next or prev lesson) -->
         <div
           class="row align-items-start"
-          style="padding-top: 25px; padding-bottom: 25px;"
+          style="padding-top: 25px; padding-bottom: 25px"
         >
           <!-- Prev button -->
           <div
             class="col"
-            style="display: flex; justify-content: center;"
+            style="display: flex; justify-content: center"
             onclick="goToPrevLesson()"
           >
             <img
-              style="width: 35px;"
+              style="width: 35px"
               src="./images/svg-files/icons/arrow-left-square-fill.svg"
             />
           </div>
           <!-- The reference button -->
-          <div class="col" style="display: flex; justify-content: center;">
+          <div class="col" style="display: flex; justify-content: center">
             <button
               style="
                 text-align: center;
@@ -217,19 +207,19 @@
           <!-- Next button -->
           <div
             class="col"
-            style="display: flex; justify-content: center;"
+            style="display: flex; justify-content: center"
             onclick="goToNextLesson()"
           >
             <img
-              style="width: 35px;"
+              style="width: 35px"
               src="./images/svg-files/icons/arrow-right-square-fill.svg"
             />
           </div>
         </div>
 
         <!-- More Options -->
-        <div style="margin-bottom: 35px;">
-          <div style="display: flex; justify-content: center;">
+        <div style="margin-bottom: 35px">
+          <div style="display: flex; justify-content: center">
             <button
               role="button"
               class="btn btn-primary"
@@ -243,7 +233,7 @@
               About
             </button>
           </div>
-          <div style="display: flex; justify-content: center;">
+          <div style="display: flex; justify-content: center">
             <button
               role="button"
               class="btn btn-primary"
@@ -257,7 +247,7 @@
               Github
             </button>
           </div>
-          <div style="display: flex; justify-content: center;">
+          <div style="display: flex; justify-content: center">
             <button
               role="button"
               class="btn btn-primary"
@@ -271,11 +261,11 @@
               Join Community!
             </button>
           </div>
-          <div style="display: flex; justify-content: center;">
+          <div style="display: flex; justify-content: center">
             <button
               role="button"
               class="btn btn-primary"
-              style="background-color: maroon; border: 0px; width: 50vw;"
+              style="background-color: maroon; border: 0px; width: 50vw"
             >
               Report Error
             </button>
@@ -284,10 +274,10 @@
 
         <!-- Top Lessons -->
         <div
-          style="display: flex; justify-content: center; margin-bottom: 25px;"
+          style="display: flex; justify-content: center; margin-bottom: 25px"
         >
           <div>
-            <h4 style="font-weight: bold;">Top Topics</h4>
+            <h4 style="font-weight: bold">Top Topics</h4>
             <ul>
               <li>{Topic1}</li>
               <li>{Topic2}</li>
@@ -300,7 +290,7 @@
 
         <!-- Disclaimer -->
         <div
-          style="text-align: center; padding-left: 20px; padding-right: 20px;"
+          style="text-align: center; padding-left: 20px; padding-right: 20px"
         >
           <p>
             <b>
@@ -317,12 +307,12 @@
         </div>
 
         <!-- Logo -->
-        <div style="display: flex; justify-content: center; padding: 50px;">
+        <div style="display: flex; justify-content: center; padding: 50px">
           <img
             class="logo-small"
             src="./images/svg-files/logo_LOSA.svg"
             alt="Project LOSA logo"
-            style="width: 250px;"
+            style="width: 250px"
           />
         </div>
       </div>
